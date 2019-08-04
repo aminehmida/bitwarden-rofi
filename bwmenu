@@ -74,24 +74,24 @@ exit_error() {
 rofi_menu() {
 
   actions=(
-    -kb-custom-1 alt+r
-    -kb-custom-2 alt+n
-    -kb-custom-3 alt+u
-    -kb-custom-4 alt+c
-    -kb-custom-8 alt+t
-    -kb-custom-9 alt+L
+    -kb-custom-1 ctrl+r
+    -kb-custom-2 ctrl+N
+    -kb-custom-3 ctrl+U
+    -kb-custom-4 ctrl+c
+    -kb-custom-8 ctrl+t
+    -kb-custom-9 ctrl+L
   )
 
-  msg="<b>Alt+r</b>: sync      | <b>Alt+u</b>: urls      | <b>Alt+n</b>: names     | <b>Alt+c</b>: folders     | <b>Alt+t</b>: totp     | <b>Alt+L</b>: lock"
+  msg="<b>Ctrl+r</b>: sync      | <b>Ctrl+u</b>: urls      | <b>Ctrl+n</b>: names     | <b>Ctrl+c</b>: folders     | <b>Ctrl+t</b>: totp     | <b>Ctrl+L</b>: lock"
 
   hash xdotool 2>/dev/null && {
     actions+=(
-      -kb-custom-5 Alt+1
-      -kb-custom-6 Alt+2
-      -kb-custom-7 Alt+3
+      -kb-custom-5 ctrl+1
+      -kb-custom-6 ctrl+2
+      -kb-custom-7 ctrl+3
     )
     msg+="
-<b>Alt+1</b>: Type all  | <b>Alt+2</b>: Type user | <b>Alt+3</b>: Type pass"
+<b>Ctrl+1</b>: Type all  | <b>Ctrl+2</b>: Type user | <b>Ctrl+3</b>: Type pass"
   }
 
   rofi -dmenu -p 'Name' \
@@ -391,18 +391,18 @@ Options:
 Quick Actions:
   When hovering over an item in the rofi menu, you can make use of Quick Actions.
 
-  Alt+r  Resync your vault
+  Ctrl+r  Resync your vault
 
-  Alt+u  Search through urls
-  Alt+n  Search through names
-  Alt+c  Search through folders
+  Ctrl+u  Search through urls
+  Ctrl+n  Search through names
+  Ctrl+c  Search through folders
 
-  Alt+t  Copy the TOTP
-  Alt+1  Autotype the username and password [needs xdotool]
-  Alt+2  Autotype the username [needs xdotool]
-  Alt+3  Autotype the password [needs xdotool]
+  Ctrl+t  Copy the TOTP
+  Ctrl+1  Autotype the username and password [needs xdotool]
+  Ctrl+2  Autotype the username [needs xdotool]
+  Ctrl+3  Autotype the password [needs xdotool]
   
-  Alt+L  Lock your vault
+  Ctrl+L  Lock your vault
 
 Examples:
   # Default options work well
